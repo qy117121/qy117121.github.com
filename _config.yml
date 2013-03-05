@@ -1,0 +1,8 @@
+markdown: rdiscount
+permalink:  /:year/:month/:day/:title.html
+url: http://yisnet.com
+production_url: http://yisnet.com # or your custom domain name
+author: Lenzero
+pygments: true
+
+paginate:    20
