@@ -16,7 +16,6 @@ echo "---
 layout: post
 title: $post_title
 category: 
-tags: 
 ---
 " >`cat $temp`
 $editor `cat $temp`
