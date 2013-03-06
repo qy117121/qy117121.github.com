@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 不死则生
-category: 无
-tags: 生活 
+category: 
+tags: [生活]
 ---
 近一星期没写github的博客了啊，太懒了。
 感觉时间是在论星期的过啊，这么快就又是一上星期了…… 完全不知道生活的意义是什么。

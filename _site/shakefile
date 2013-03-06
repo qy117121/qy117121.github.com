@@ -1,0 +1,35 @@
+#!/bin/bash
+LANG=zh
+dir=~/github/qy117121.github.com/_posts
+cd $dir
+temp=/tmp/post.$$
+editor=gedit
+
+echo "输入文件名"
+read post_link
+
+echo -n `LANG=C date +%F`-"$post_link".md >>$temp
+touch `cat $temp`
+echo "输入文章title"
+read post_title
+echo "---
+layout: post
+title: $post_title
+category: 
+tags: 
+---
+" >`cat $temp`
+$editor `cat $temp`
+echo "Are you sure to push to github?(N)"
+read ans
+case "$ans" in 
+	n* | N* )
+		exit 0
+		;;
+	*)
+		git add .
+		git commit -a -m 'new post'
+		git push
+		;;
+esac
+exit 0
