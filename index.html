@@ -1,30 +1,97 @@
----
-title: Stay Hungry,Stay Foolish
-layout: page
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8" />
+<title>YisNet.COM</title>
 
-<ul class="listing">
- {% for post in paginator.posts %}
-  {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
-  {% if year != y %}
-    {% assign year = y %}
-<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='400' height='95' id='bdmp3widget3145'><param name='movie' value='http://box.baidu.com/widget/flash/mbsong.swf?name=stories&artist=hitomi'></param><param name='wmode' value='opaque'></param><param name='allowscriptaccess' value='always'></param><embed src='http://box.baidu.com/widget/flash/mbsong.swf?name=stories&artist=hitomi' type='application/x-shockwave-flash' wmode='opaque' allowscriptaccess='always' width='400' height='95' name='bdmp3widget3145'></embed></object>
-    <li class="listing-seperator">{{ y }}</li>
-  {% endif %}
-  <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-  </li>
-{% endfor %}
-</ul>
+<!-- 使用url函数转换相关路径 -->
+<link rel="shortcut icon" href="/favicon.ico">
 
- {% if paginator.previous_page %}
-  	{% if paginator.page == 2 %}
-  		<a href="/" rel="bookmark"> << Previous Page</a>
-  	{% else %}
-  		<a href="/page{{ paginator.previous_page }}" rel="bookmark"> << Previous Page</a>
-  	{% endif %}
-  {% endif %}
-  {% if paginator.next_page %}
-  	<a href="/page{{ paginator.next_page }}" rel="bookmark" style="float:right">Next Page >></a>
-  {% endif %}
+<link rel="stylesheet" type="text/css" media="all" href="/style/style.css" />
+
+<!-- 通过自有函数输出HTML头部信息 -->
+
+</head>
+<body>
+
+<!-- 头部开始 -->
+	<div class="h95"></div>
+<div class="box wid850"> 
+    <div class="selfinfo">
+        	<div class="logo">
+<a href="/"><img src="/style/img/tx2logo.png"><i></i></a>
+            </div>
+	    <h1><a href="/">YisNet.COM</a></h1>
+	    
+    </div>
+<div class="sch">
+        <form action="/#" method="get">
+           <input type="text" name="s" id="s"  value="查找文章..." onfocus="this.value='';" />	
+
+        </form>
+
+    </div>
+
+
+</div>
+<!-- 头部结束 -->
+
+<!-- 中部开始 -->
+<div class="box wid850  ">   
+            <div class="block article">
+                  <div class="side">
+ <div class="day"><a href="#">YISnet</a></div>
+
+
+</div>
+
+ <div class="main">
+                    <div class="content">
+                        <div class="text">
+			 <h2><a href="#">本站正在维护中~~(>^ω^<)</a></h2>
+			 
+			 <P></P>
+<p><h3><a href="/">点此返回</a></h3>
+			<p align="center"><img src="/style/img/404.jpg" alt="404" title="" /></p>			
+            </p>
+                </div>
+	</div>
+           
+</div>
+</div>
+
+</div>
+
+<!-- 中部结束 --> 
+
+<div class="footer">
+<div class="box wid850  "> 
+  &copy; by <a href="http://yisnet.com">YisNet.COM</a> 2014</div>
+
+</div>
+
+
+
+<script type="text/javascript" src="/sytle/js/jquery-1.6.2.min.js'); ?>"></script>
+<script type="text/javascript">
+$(function(){
+    if($('.postwrapper > .block').length <= 0) {
+        $('.postwrapper').css('display', 'none');
+    }
+	$(".active a").each(function(){	
+		$(this).hover(
+			function(){
+				$(this).css("cursor","pointer");
+				$(this).stop();
+		   		$(this).animate({width:90},400,function(){$(this).children(".title").css("display","block");})},
+			function(){
+				$(this).stop();	
+				$(this).children(".title").css("display","none");
+				$(this).animate({width:20},400)})
+	})
+})
+</script>
+
+
+</body>
+</html>
